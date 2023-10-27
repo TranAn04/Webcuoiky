@@ -1,0 +1,289 @@
+
+@{
+    ViewBag.Title = "DienThoai";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<link href="~/Content/Main.css" rel="stylesheet" />
+<div id="telephone">
+    <div id="tele-head">
+        <div id="tele-left">
+            <img class="tele-slide" src="~/Content/Img/DienThoai/Artboard-1-2.png" />
+            <img class="tele-slide" src="~/Content/Img/DienThoai/poster-left.png" />
+            <img class="tele-slide" src="~/Content/Img/DienThoai/Poster.png" />
+            <img class="tele-slide" src="~/Content/Img/DienThoai/Poster1.png" />
+        </div>
+        <script>
+            var myIndex = 0;
+            slide();
+            function slide() {
+                var i;
+                var x = document.getElementsByClassName("tele-slide");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(slide, 2000);
+            }
+        </script>
+    </div>
+    <div id="tele-body">
+        <div id="sam-tele">
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu tím-Lilac.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">21.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu xanh-Botanic.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">25.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <!--<button class="see-more">Xem thêm</button>
+            <script>
+                const btnSeeMore = document.querySelector(".see-more");
+                btnSeeMore.addEventListener("click", async () => {
+                    const NumberOfproducts = document.querySelector("#sam-tele").querySelectorAll(".sam-sp-tele").length;
+                    const response = await fetch("/api/products?page=" + (NumberOfproducts + 1));
+                    const products = await response.json();-->
+                    @*products.forEach((sam - sp - tele) => {
+                        const productElement = document.createElement()
+                    });*@
+                <!--});
+            </script>-->
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu tím-fancy.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">30.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>35.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">27.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/s22-ult đỏ đất.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu tím-Lilac.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">21.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu xanh-Botanic.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">25.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu tím-fancy.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">30.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>35.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">27.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/SamSung/s22-ult đỏ đất.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/Iphone/IPhone 15_black_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Màu Đen 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">42.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>44.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">38.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/Iphone/IPhone 15_pink_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Hồng Nữ Tính 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">40.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>43.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">37.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">20.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-max-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">22.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>25.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp-tele">
+                <img src="~/Content/Img/Iphone/IPhone-15-pro-max-128gb_Bạc.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Pro Max 256GB</b><br />
+                <div class="info-tele">
+                    <span class="in-tele" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                    <span class="in-tele">8 GB</span>
+                    <span class="in-tele">256 GB</span>
+                </div>
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p style="font-size: 20px">Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
