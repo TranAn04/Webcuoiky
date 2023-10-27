@@ -1,0 +1,388 @@
+
+@{
+    ViewBag.Title = "PhuKien";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<link href="~/Content/PhuKien.css" rel="stylesheet" />
+
+<div id="body-phukien">
+    <div class="top">
+        <img class="img_top" src="https://cdn2.cellphones.com.vn/1200x/https://dashboard.cellphones.com.vn/storage/phu-kien-dien-thoai-desk.png">
+    </div>
+    <div class="phukiendt">
+        <div class="phukiendt1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_117_1.png" />
+            <p id="product-name">Sạc nhanh 20W Apple MHJE3ZA | Chính hãng Apple Việt Nam</p>
+            <div class="giatien">
+                <p id="newPrice">490.000đ</p>
+                <p id="oldPrice">890.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukiendt1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/3/h/3h48.png" />
+            <p id="product-name">Ốp lưng iPhone 14 Pro Max Spigen Crystal hỗ trợ sạc Magsafe</p>
+            <div class="giatien">
+                <p id="newPrice">600.000đ</p>
+                <p id="oldPrice">1.200.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukiendt1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_111_5_.png" />
+            <p id="product-name">Tai nghe Bluetooth Apple AirPods Pro 2022 | Chính hãng Apple Việt Nam</p>
+            <div class="giatien">
+                <p id="newPrice">5.790.000đ</p>
+                <p id="oldPrice">6.190.000₫</p>
+            </div>
+            <div class="pricelen">
+                <p id="gialen">Giá lên đời:&nbsp</p> <p id="gialendoi">5.290.000đ</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Nhận gói 6 tháng Apple Music miễn phí</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukiendt1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_169_2.png" />
+            <p id="product-name">Tai nghe Bluetooth Apple AirPods 2 | Chính hãng Apple Việt Nam</p>
+            <div class="giatien">
+                <p id="newPrice">2.690.000đ</p>
+                <p id="oldPrice">3.990.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Nhận gói 6 tháng Apple Music miễn phí</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukiendt1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_170_1_1.png" />
+            <p id="product-name">Tai nghe Bluetooth Apple AirPods 3 2022 sạc có dây | Chính hãng Apple Việt Nam</p>
+            <div class="giatien">
+                <p id="newPrice">4.190.000₫</p>
+                <p id="oldPrice">4.490.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Nhận gói 6 tháng Apple Music miễn phí</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+    </div>
+    <!-- Phụ kiện laptop -->
+    <div class="top">
+        <img class="img_top" src="https://cdn2.cellphones.com.vn/1200x/https://dashboard.cellphones.com.vn/storage/phu-kien-laptop-desk.png">
+    </div>
+    <div class="phukienlaptop">
+        <div class="phukienlaptop1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_210_1_.png" />
+            <p id="product-name">Phần mềm Microsoft Windows 11 Pro</p>
+            <div class="giatien">
+                <p id="newPrice">4.690.000đ</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukienlaptop1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_208_1_.png" />
+            <p id="product-name">Phần mềm Microsoft Windows 11 Home</p>
+            <div class="giatien">
+                <p id="newPrice">3.590.000đ</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukienlaptop1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/m/i/micro-soft-famaily-3.png" />
+            <p id="product-name">Phần mềm Microsoft Office 365 Personal</p>
+            <div class="giatien">
+                <p id="newPrice">990.000đ</p>
+                <p id="oldPrice">1.490.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukienlaptop1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/o/f/office_v_nh_vi_n.png" />
+            <p id="product-name">Phần mềm Microsoft Office Home & Student 2021</p>
+            <div class="giatien">
+                <p id="newPrice">2.190.000đ</p>
+                <p id="oldPrice">2.990.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="phukienlaptop1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/m/i/micro-soft-famaily.png" />
+            <p id="product-name">Phần mềm Microsoft Office 365 Family (12 tháng X 6 User)</p>
+            <div class="giatien">
+                <p id="newPrice">1.490.000₫</p>
+                <p id="oldPrice">1.990.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+    </div>
+    <!-- thiết bị mạng -->
+    <div class="top">
+        <img class="img_top" src="https://cdn2.cellphones.com.vn/1200x/https://dashboard.cellphones.com.vn/storage/thiet-bi-mang-desk.png">
+    </div>
+    <div class="thietbimang">
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/h/_/h_nh_5.png" />
+            <p id="product-name">Router Wifi TP-Link Archer C54 băng tần kép AC1200</p>
+            <div class="giatien">
+                <p id="newPrice">439.000đ</p>
+                <p id="oldPrice">699.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_265.png" />
+            <p id="product-name">USB Nano Bluetooth 5.0 TP-Link UB500</p>
+            <div class="giatien">
+                <p id="newPrice">139.000đ</p>
+                <p id="oldPrice">190.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_266.png" />
+            <p id="product-name">Bộ kích sóng Wifi Xiaomi Pro </p>
+            <div class="giatien">
+                <p id="newPrice">276.000đ</p>
+                <p id="oldPrice">290.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/2/_/2.2.png" />
+            <p id="product-name">Bộ phát Wifi di động 4GB LTE 150 MBPS Tenda - 4G180</p>
+            <div class="giatien">
+                <p id="newPrice">849.000đ</p>
+                <p id="oldPrice">1.049.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_11_1_5.png" />
+            <p id="product-name">Thiết bị phát Wifi di động 4G LTE TP-Link M7000</p>
+            <div class="giatien">
+                <p id="newPrice">899.000₫</p>
+                <p id="oldPrice">1.190.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+    </div>
+    <!-- Camera -->
+    <div class="top">
+        <img class="img_top" src="https://cdn2.cellphones.com.vn/1200x/https://dashboard.cellphones.com.vn/storage/camera-desk.png">
+    </div>
+    <div class="camera">
+        <div class="camera1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/c/a/camera-hanh-trinh-gopro-hero-11_1_.png" />
+            <p id="product-name">Camera GoPro Hero 11</p>
+            <div class="giatien">
+                <p id="newPrice">9.690.000đ</p>
+                <p id="oldPrice">13.990.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Tặng thẻ nhớ SamSung Evo Plus (2021)</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="camera1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/c/a/camera-ip-wifi-tp-link-tapo-c200-360-1080p-2mp_1_.png" />
+            <p id="product-name">Camera IP Wifi TP-Link Tapo C200 360° 1080P 2MP</p>
+            <div class="giatien">
+                <p id="newPrice">490.000đ</p>
+                <p id="oldPrice">1.290.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Lắp đặt tận nhà bao gồm: công lắp và vật tư tại Hà NỘi và Hồ Chí Minh</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="camera1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/c/a/camera-ip-wifi-ezviz-c6n-1080p-2mp_1_.png" />
+            <p id="product-name">Camera IP hồng ngoại Wifi Ezviz C6N 1080p 2MP </p>
+            <div class="giatien">
+                <p id="newPrice">490.000đ</p>
+                <p id="oldPrice">790.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Lắp đặt tận nhà bao gồm: công lắp và vật tư tại Hà NỘi và Hồ Chí Minh</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="camera1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/c/a/camera-hanh-trinh-gopro-hero-12_3_.png" />
+            <p id="product-name">Camera GoPro Hero 12</p>
+            <div class="giatien">
+                <p id="newPrice">11.490.000đ</p>
+                <p id="oldPrice">12.490.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Tặng thẻ nhớ 64GB Sandisk Class 10 100MBPS và 1 km khác</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="camera1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/c/a/camera-ip-wifi-imou-ipc-a22ep-d-v3-1080p-2mp_4_.png" />
+            <p id="product-name">Camera IP hồng ngoại không dây 2.0 MP IMOU IPC-A22EP 1080P</p>
+            <div class="giatien">
+                <p id="newPrice">490.000₫</p>
+                <p id="oldPrice">1.195.000₫</p>
+            </div>
+            <div class="promotion">
+                <p class="coupon-price">Lắp đặt tận nhà bao gồm: công lắp và vật tư tại Hà NỘi và Hồ Chí Minh</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+    </div>
+    <!--Phụ kiện khác-->
+    <div class="top">
+        <img class="img_top" src="https://cdn2.cellphones.com.vn/1200x/https://dashboard.cellphones.com.vn/storage/phu-kien-khac-desk.png">
+    </div>
+    <div class="thietbimang">
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/d/a/day-deo-airtag-apple-loop-1.jpeg" />
+            <p id="product-name">Dây đeo Apple AirTag Loop chính hãng</p>
+            <div class="giatien">
+                <p id="newPrice">395.000đ</p>
+                <p id="oldPrice">790.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/d/a/day-deo-airtag-esr-2-trong-1-silicon-1.png" />
+            <p id="product-name">Dây đeo Airtag ESR 2in1 Silicon</p>
+            <div class="giatien">
+                <p id="newPrice">145.000đ</p>
+                <p id="oldPrice">290.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/d/a/day-deo-airtag-wiwu-silicone-4-in-1-pack-2.jpg" />
+            <p id="product-name">Dây Đeo Apple AirTag WIWU Silicone Combo 4 màu trong 1 </p>
+            <div class="giatien">
+                <p id="newPrice">100.000đ</p>
+                <p id="oldPrice">200.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/d/a/day-deo-airtag-wiwu-silicone-loop-1.jpg" />
+            <p id="product-name">  Dây Đeo Apple AirTag WIWU Silicone Loop</p>
+            <div class="giatien">
+                <p id="newPrice">100.000đ</p>
+                <p id="oldPrice">200.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+        <div class="thietbimang1">
+            <img id="product-img" src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/d/a/day-deo-airtag-wiwu-leather-key-ring-2.jpg" />
+            <p id="product-name">Dây Đeo Apple AirTag WIWU Leather Key Ring</p>
+            <div class="giatien">
+                <p id="newPrice">150.000₫</p>
+                <p id="oldPrice">300.000₫</p>
+            </div>
+            <!-- <p id="star"><img src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-beautiful-golden-star-png-image_1733945.jpg"/></p> -->
+            <span>
+                Yêu thích &nbsp;
+                <i style='font-size:24px' class='fab' color:red;>&#xf184;</i>
+            </span>
+        </div>
+    </div>
+</div>
