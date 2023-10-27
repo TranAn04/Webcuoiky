@@ -1,0 +1,608 @@
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<link href="~/Content/Main.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cndjs.cloudflare.com/ajax/libs/font-awesom/6.0.2/css/all.min.css" />
+<div class="body-up">
+    <div id="me-left">
+        <div class="tree-me">
+            <a href="@Url.Action("DienThoai","Home")" style="text-decoration: none">
+                <img src="~/Content/Img/smartphone-icon.png" />
+                <span style="color: black"> Điện thoại</span>
+            </a>
+        </div>
+        <div class="tree-me">
+            <img src="~/Content/Img/Laptop-icon.png" />
+            Laptop
+        </div>
+        <div class="tree-me">
+            <a href="PhuKien" style="text-decoration: none">
+                <img src="~/Content/Img/Charger port.png" />
+                <span style="color: black">Phụ kiện</span>
+            </a>
+        </div>
+        <div class="tree-me">
+            <img src="~/Content/Img/Oldsmartphone.png" />
+            Thu cũ
+        </div>
+        <div class="tree-me">
+            <img src="~/Content/Img/NewsPaper.png" />
+            Tin tức công nghệ
+        </div>
+    </div>
+    <div id="me-mid">
+        <img class="myslide" src="~/Content/Img/Slide-showjpg (1).jpg" />
+        <img class="myslide" src="~/Content/Img/Slide-showjpg (2.1).jpg" />
+        <img class="myslide" src="~/Content/Img/Slide-showjpg (3.1).jpg" />
+        <img class="myslide" src="~/Content/Img/Slide-showjpg (4.1).jpg" />
+    </div>
+    <script>
+        var myIndex = 0;
+        slide();
+        function slide() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(slide, 2000);
+        }
+    </script>
+    <div id="me-right">
+        <img class="right" src="~/Content/Img/rightbar1.png" />
+        <img class="right" src="~/Content/Img/rightbar2.png" style="margin:25px 0px" />
+        <img class="right" src="~/Content/Img/rightbar3.jpg" />
+    </div>
+</div>
+<img id="advers" src="~/Content/Img/under1.jpg" />
+<div id="date-sale">
+    <div id="countdown">
+        <span>Thời gian sale còn lại </span>
+        <div class="sale-item">
+            <div id="day">0</div>
+        </div>
+        <span style="font-size: 20px">:</span>
+        <div class="sale-item">
+            <div id="hour">0</div>
+        </div>
+        <span>:</span>
+        <div class="sale-item">
+            <div id="minute">0</div>
+        </div>
+        <span>:</span>
+        <div class="sale-item">
+            <div id="seconds">0</div>
+        </div>
+    </div>
+    <script>
+        let endDate = new Date("10/30/2023 00:00:00").getTime();
+        let check = setInterval(function () {
+            let now = new Date().getTime();
+            let distance = endDate - now;
+            let day = Math.floor(distance / (24 * 60 * 60 * 1000));
+            let hour = Math.floor((distance % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+            let minute = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000))
+            let seconds = Math.floor((distance % (60 * 1000)) / 1000);
+            document.getElementById('day').innerText = day;
+            document.getElementById('hour').innerText = hour;
+            document.getElementById('minute').innerText = minute;
+            document.getElementById('seconds').innerText = seconds;
+            if (distance <= 0) {
+                clearInterval(check);
+            }
+        }, 1000);
+    </script>
+
+    <div id="pro-sale">
+        <button id="left" type="button">&#10094;</button>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu tím-Lilac.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu xanh-Botanic.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu tím-fancy.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/S22-ult xanh.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/s22-ult đỏ đất.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu xanh-Botanic.png" />
+        </div>
+        <div class="slide-sale">
+            <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu tím-fancy.png" />
+        </div>
+        <button id="right" type="button">&#10095;</button>
+    </div>
+    @*<script>
+            const sam = document.querySelector("#pro-sale"),
+                firstImg = sam.querySelectorAll(".slide-sale")[0],
+                arrowIcon = document.querySelectorAll(".wrapper button");
+            let firstImgWidth = firstImg.clientWidth + 14;
+            let scrollwitdth = sam.scrollWidth - sam.clientWidth;
+            const showhiddenicon = () => {
+                if (sam.scrollLeft == 0) {
+                    arrowIcon[0].style.display = "none";
+                }
+                else {
+                    arrowIcon[0].style.display = "block";
+                }
+                if (sam.scrollLeft == scrollwitdth) {
+                    arrowIcon[1].style.display = "none";
+                }
+                else {
+                    arrowIcon[1].style.display = "block";
+                }
+            }
+            arrowIcon.forEach(icon => {
+                icon.addEventListener("click", () => {
+                    if (icon.id == "left") {
+                        sam.scrollLeft -= firstImgWidth;
+                    }
+                    else {
+                        sam.scrollLeft += firstImgWidth;
+                    }
+                    setTimeout(() => showhiddenicon(), 60);
+                });
+            });
+        </script>*@
+    
+</div>
+<div id="body-mid">
+    <div>
+        <h1 style="margin:10px 0px 10px 5px">Samsung</h1>
+    </div>
+    <div class="wrapper">
+        <button id="left" type="button">&#10094;</button>
+        <div id="sam">
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu tím-Lilac.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">21.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy S23 Ultra màu xanh-Botanic.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">25.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>31.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">19.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu tím-fancy.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">30.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>35.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">27.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/s22-ult đỏ đất.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/SamSung/Galaxy Z Flip5 màu xám-indie.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Samsung Galaxy S23 Ultra 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">33.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>39.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">28.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+        </div>
+        <button id="right" type="button">&#10095;</button>
+    </div>
+    <div>
+        <h1 style="margin:10px 0px 10px 5px">Iphone</h1>
+    </div>
+    <div class="wrapper">
+        <button id="left" type="button">&#10094;</button>
+        <div id="sam">
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone 15_black_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Màu Đen 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">42.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>44.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">38.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone 15_pink_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Hồng Nữ Tính 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">40.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>43.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">37.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">128 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">20.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-max-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">128 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">22.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>25.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-15-pro-max-128gb_Bạc.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Pro Max 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone 15_black_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Màu Đen 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">42.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>44.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">38.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone 15_pink_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Hồng Nữ Tính 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">40.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>43.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">37.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">128 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">20.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-14-pro-max-128gb_.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 14 Pro Max 128GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">128 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">22.990.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>25.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">18.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+            <div class="sam-sp">
+                <img src="~/Content/Img/Iphone/IPhone-15-pro-max-128gb_Bạc.png" />
+                <b style="margin: 10px 20px 10px 20px; width:250px; height:80px">Iphone 15 Pro Max 256GB</b><br />
+                @*<div class="info">
+                        <span class="in" style="margin:10px 5px 0px 20px">6.8 inches</span>
+                        <span class="in">8 GB</span>
+                        <span class="in">256 GB</span>
+                    </div>*@
+                <div style=" font-size:15px; margin:10px 5px 0px 0px">
+                    <b style="color: red;">18.790.000<sup><ins>đ</ins></sup></b><span style="color:gray; margin-left:20px;"><b><del>22.990.000<ins>đ</ins></del></b></span><br />
+                    Giá lên đời: <b style="color:red">15.790.000</b><sup style="color:red"><ins>đ</ins></sup>
+                </div>
+                <div class="khuyenmai">
+                    <p>Nhận ngay ưu đãi Youtube Premium dành cho chủ sở hữu</p>
+                </div>
+            </div>
+        </div>
+        <button id="right" type="button">&#10095;</button>
+    </div>
+    <script>
+        const sam = document.querySelector("#sam"),
+            firstImg = sam.querySelectorAll(".sam-sp")[0],
+            arrowIcon = document.querySelectorAll(".wrapper button");
+        let firstImgWidth = firstImg.clientWidth + 14;
+        let scrollwitdth = sam.scrollWidth - sam.clientWidth;
+        const showhiddenicon = () => {
+            if (sam.scrollLeft == 0) {
+                arrowIcon[0].style.display = "none";
+            }
+            else {
+                arrowIcon[0].style.display = "block";
+            }
+            if (sam.scrollLeft == scrollwitdth) {
+                arrowIcon[1].style.display = "none";
+            }
+            else {
+                arrowIcon[1].style.display = "block";
+            }
+        }
+        arrowIcon.forEach(icon => {
+            icon.addEventListener("click", () => {
+                if (icon.id == "left") {
+                    sam.scrollLeft -= firstImgWidth;
+                }
+                else {
+                    sam.scrollLeft += firstImgWidth;
+                }
+                setTimeout(() => showhiddenicon(), 60);
+            });
+        });
+    </script>
+</div>
+<div id="body-down">
+    <div class="phukien">
+        <div class="phukien1">
+            <div id="pk"><h2>Phụ kiện</h2></div>
+            <div id="xemtc"><h3>xem tất cả</h3></div>
+        </div>
+        <div class="phukien2">
+            <div class="content">
+                <table id="product-Table">
+                    <tr>
+                        <td id="product-img">
+                            <span id="text">Nổi bật</span>
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:150:0/q:70/plain/https://cellphones.com.vn/media/icons/category/cate-1644.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Phụ kiện Apple</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-43.svg" />
+                        </td>
+
+                        <td id="product-img">
+                            <span id="text">Dán màn hình</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-286.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Ốp lưng - Bao da</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-108.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Cáp, sạc</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-114.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Pin dự phòng</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-122.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Thiết bị mạng</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-676.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Gaming Gear</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-669.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Gimbal | Tay cầm chống rung</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-852.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Thẻ nhớ, USB</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-109.svg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="product-img">
+                            <span id="text">Chuột, bàn phím</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-663.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Sim 4G</span>
+                            <img src="https://cellphones.com.vn/media/catalog/product/s/i/sim_1_1.png" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Sim số đẹp</span>
+                            <img src="https://cellphones.com.vn/media/catalog/product/s/i/sim_5.png" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Camera hành trình</span>
+                            <img src="https://cellphones.com.vn/media/tmp/catalog/product/i/c/icon_cam_htrinh.png" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Camera an ninh</span>
+                            <img src="https://cellphones.com.vn/media/tmp/catalog/product/i/c/icon_cam_anninh.png" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Phụ kiện Laptop</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-44.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Balo, túi chống sốc</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-70.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Quạt mini</span>
+                            <img src="https://cellphones.com.vn/media/tmp/catalog/product/c/a/cate-109-quat.png" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Ổ cứng di động</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-750.svg" />
+                        </td>
+                        <td id="product-img">
+                            <span id="text">Apple Care</span>
+                            <img src="https://cellphones.com.vn/media/icons/category/cate-966.svg" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
